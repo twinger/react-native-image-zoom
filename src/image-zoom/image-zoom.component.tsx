@@ -138,10 +138,9 @@ export default class ImageViewer extends React.Component<Props, State> {
             if (this.props.enableDoubleClickZoom) {
               if (this.scale > 1 || this.scale < 1) {
                 // 回归原位
-                this.scale = 1;
-
-                this.positionX = 0;
-                this.positionY = 0;
+                // this.scale = 1;
+                // this.positionX = 0;
+                // this.positionY = 0;
               } else {
                 // 开始在位移地点缩放
                 // 记录之前缩放比例
@@ -481,7 +480,7 @@ export default class ImageViewer extends React.Component<Props, State> {
 
     if (this.props.enableCenterFocus && this.scale < 1) {
       // 如果缩放小于1，强制重置为 1
-      this.scale = 1;
+      // this.scale = 1;
       Animated.timing(this.animatedScale, {
         toValue: this.scale,
         duration: 100
